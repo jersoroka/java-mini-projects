@@ -1,5 +1,6 @@
 package main;
 
+import java.security.KeyStore;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class Value {
     }
 
     // EFFECTS: returns the first integer that divides value without a remainder.
-    public int firstPrimeFactor(int value) {
+    public static int firstPrimeFactor(int value) {
         int prime = value;
         for (int i = 2; i < value; i++) {
             if (value % i == 0) {
@@ -39,8 +40,20 @@ public class Value {
         return prime;
     }
 
-    public int getValue() {
-        return value;
+    // EFFECTS: returns the next prime number of value
+    public static int findNextPrimeNumber(int number) {
+        int prime;
+        int currentValue = number;
+
+        while (true) {
+            currentValue++;
+
+            if (Value.firstPrimeFactor(currentValue) == currentValue) {
+                prime = currentValue;
+                break;
+            }
+        }
+        return prime;
     }
 
     public List<Integer> getPrimeFactors() {

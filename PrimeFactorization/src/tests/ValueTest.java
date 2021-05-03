@@ -11,18 +11,16 @@ public class ValueTest {
 
     @Test
     void testFindFirstPrimeNumberIsAPrimeFactor() {
-        testValue = new Value(2);
         int testNumber = 2;
 
-        assertEquals(2, testValue.firstPrimeFactor(testNumber));
+        assertEquals(2, Value.firstPrimeFactor(testNumber));
     }
 
     @Test
     void testFindFirstPrimeNumberHasPrimeFactor() {
-        testValue = new Value(9);
         int testNumber = 9;
 
-        assertEquals(3, testValue.firstPrimeFactor(testNumber));
+        assertEquals(3, Value.firstPrimeFactor(testNumber));
     }
 
     @Test
@@ -53,6 +51,15 @@ public class ValueTest {
             }
         }
         return counter;
+    }
+
+    @Test
+    void testFindNextPrimeNumber() {
+        int testNumber = 30;
+        assertEquals(31, Value.findNextPrimeNumber(testNumber));
+
+        testNumber = 7;
+        assertEquals(11, Value.findNextPrimeNumber(testNumber));
     }
 
 }
