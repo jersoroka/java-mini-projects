@@ -1,6 +1,5 @@
 package main;
 
-import java.security.KeyStore;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,5 +57,23 @@ public class Value {
 
     public List<Integer> getPrimeFactors() {
         return primeFactors;
+    }
+
+    @Override
+    public String toString() {
+        String output;
+        if (primeFactors.size() == 1) {
+          output = "The only prime factor of 1 is 1";
+        } else if (primeFactors.size() == 2) {
+            output = "The prime factors of " + value + " are " + primeFactors.get(0) + " and " + primeFactors.get(1);
+        } else {
+            StringBuilder primes = new StringBuilder();
+            for (int i = 0; i <= primeFactors.size() - 2; i++) {
+                primes.append(primeFactors.get(i)).append(", ");
+            }
+            primes.append("and ").append(primeFactors.get(primeFactors.size() - 1));
+            output = "The prime factors for " + value + " are " + primes;
+        }
+        return output;
     }
 }
