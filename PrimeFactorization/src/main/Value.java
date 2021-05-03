@@ -3,6 +3,7 @@ package main;
 import java.util.ArrayList;
 import java.util.List;
 
+// represents an integer and a list of its prime factors
 public class Value {
     private int value;
     private List<Integer> primeFactors;
