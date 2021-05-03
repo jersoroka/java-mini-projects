@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PrimeFactorization/PrimeFactorization.iml" filepath="$PROJECT_DIR$/PrimeFactorization/PrimeFactorization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrimeNumbers/PrimeFactorization.iml" filepath="$PROJECT_DIR$/PrimeNumbers/PrimeFactorization.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mini-java-projects.iml" filepath="$PROJECT_DIR$/.idea/mini-java-projects.iml" />
     </modules>
   </component>
