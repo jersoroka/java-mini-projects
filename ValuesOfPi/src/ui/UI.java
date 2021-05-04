@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class UI {
     private final Scanner scanner = new Scanner(System.in);
 
+    // EFFECTS: console user-interface for finding the nth digit of pi
     public UI() {
         boolean keepGoing = true;
 
