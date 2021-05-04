@@ -1,3 +1,5 @@
+import exceptions.OutOfBoundsException;
+
 import java.util.Scanner;
 
 public class UI {
@@ -8,13 +10,16 @@ public class UI {
 
         while (keepGoing) {
             try {
-                System.out.println("Which digit of pi do you want (starting from the decimal point)? That is, position 0 corresponds to 1 and so on. Note that the highest position to search is 14.");
+                System.out.println("Which digit position of pi do you want to retrieve (starting from position 0)?");
 
                 int next = scanner.nextInt();
 
-                System.out.println("The decimal digit at position " + next + " is " + Pi.findNthPiDigit(next));
+                String digit = Pi.findNthPiDigit(next);
+                System.out.println("The digit at position " + next + " is " + digit);
+            } catch (OutOfBoundsException e) {
+                System.out.println(e.getMessage());
             } catch (Exception e) {
-                System.out.println("Invalid entry");
+                System.out.println("Invalid entry.");
             }
         }
     }
