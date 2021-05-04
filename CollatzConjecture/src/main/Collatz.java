@@ -6,7 +6,7 @@ public class Collatz {
      // EFFECTS: returns the number of steps it takes for i to reach 1 when the collatz conjecture is applied
      //          Throws Exception if i < 1.
      public static int counter(int i) throws Exception {
-          if (i < 1) {
+          if (i <= 1) {
                throw new Exception();
           }
 
