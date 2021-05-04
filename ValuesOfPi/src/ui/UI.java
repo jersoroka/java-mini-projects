@@ -1,4 +1,7 @@
+package ui;
+
 import exceptions.OutOfBoundsException;
+import main.Pi;
 
 import java.util.Scanner;
 
